@@ -257,11 +257,11 @@ h4 {
     }
 
     section {
-        display: block;
+        display: flex;
     }
 
     section img {
-        display: block;
+        display: flex;
         width: 100%;
         height: auto;
     }
