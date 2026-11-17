@@ -2,6 +2,7 @@
     text-decoration: none;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,21 +12,35 @@ body {
 }
 
 .wrapper {
-    width: 1001px;
+    width: 95%;
+    max-width: 1200px;
     margin: auto;
-    position: relative;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo a {
     font-size: 20px;
     font-family: 'comic sans ms';
     font-weight: 800;
-    color: #411ab7;
-    float: left;
+    color: #3e12c1;
+}
+
+.utama {
+    font-size: 30px;
 }
 
 .menu {
-    float: right;
+    display: flex;
 }
 
 nav {
@@ -36,7 +51,7 @@ nav {
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
-    background-color: aliceblue;
+    background-color: rgb(176, 210, 240);
     z-index: 1;
 }
 
@@ -44,19 +59,23 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: flex !important;
+    align-items: center;
+    gap: 20px;
 }
 
 nav ul li {
-    float: left;
+    display: inline-block;
 }
 
 nav ul li a {
     color: black;
     font-weight: bold;
     text-align: center;
-    padding: 0px 16px 0px 16px;
+    padding: 5px 10px;
+    font-size: 18px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -71,7 +90,7 @@ section {
 }
 
 .kolom {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -79,15 +98,15 @@ section {
     font-size: 20px;
     font-weight: bold;
     font-family: 'comic sans ms';
-    color: #411ab7;
+    color: #3e12c1;
 }
 
 h2 {
     font-family: 'comic sans ms';
     font-weight: 700;
     font-size: 45px;
-    margin-bottom: 30px;
-    color: #411ab7;
+    margin-bottom: 50px;
+    color: #3e12c1;
     width: 100%;
     line-height: 50px;
 }
@@ -102,15 +121,42 @@ a.tbl-one {
     background: #0BA6DF;
     border-radius: 20px;
     margin-top: 20px;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 10px 10px 10px;
     color: aliceblue;
     cursor: pointer;
     font-weight: bold;
+    margin-right: 20px;
 }
 
 a.tbl-one:hover {
     background: #FAA533;
     text-decoration: none;
+}
+
+.kelas-online {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 10px 30px;
+}
+
+.metode-online {
+    border-bottom: 3px solid black;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.kelas-offline {
+    border-bottom: 3px solid black;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.judul-offline {
+    margin-bottom: 20px;
+}
+
+.deskripsi-offline {
+    margin-bottom: 20px;
 }
 
 a.tbl-two {
@@ -133,7 +179,7 @@ a.tbl-two:hover {
     text-decoration: none;
 }
 
-.gambar {
+.gambar1 {
     margin-top: 0px;
     width: auto;
     height: 400px;
@@ -156,11 +202,15 @@ a.tbl-two:hover {
 .kartu-tutor {
     width: 20%;
     margin: 0 auto;
+    position: relative;
 }
 
 .kartu-tutor img {
-    width: 20%;
+    width: 80%;
     border-radius: 50%;
+    border: 2px solid black;
+    height: 300px;
+    object-fit: cover;
 }
 
 .kartu-tutor p {
@@ -168,28 +218,46 @@ a.tbl-two:hover {
     font-weight: 800;
     font-size: 25px;
     text-align: center;
-    color: #411ab7;
+    color: #3e12c1;
 }
 
 .partners {
-    margin-top: auto;
+    margin-top: 15px;
+}
+
+.bagian-partners {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5px auto;
+    padding: 0px 20px;
+}
+
+.judul-partners {
+    margin-bottom: 20px;
+}
+
+.deskripsi-partners {
+    margin-bottom: 25px;
 }
 
 .partner-list {
     width: 100%;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .kartu-partner {
-    width: 20%;
-    margin: 0 auto;
+    width: 25%;
+    text-align: center;
 }
 
 .kartu-partner img {
-    width: 150px;
-    border-radius: 50px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
 }
 
 .contact {
@@ -201,76 +269,113 @@ a.tbl-two:hover {
     width: 100%;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    padding: 0px 20px;
+    box-sizing: border-box;
 }
 
 .footer-section {
-    width: 20%;
-    margin: 0px auto;
+    width: 23%;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 h4 {
     font-family: 'comic sans ms';
-    font-weight: 800;
+    font-weight: 800px;
     font-size: 20px;
     margin-bottom: 0px;
-    color: #411ab7;
+    color: #3e12c1;
     width: 100%;
     line-height: 20px;
 }
 
-#copyright {
+.copyright {
     text-align: center;
     width: 100%;
     padding: 30px 0px 30px 0px;
     margin-top: 0px;
+    font-weight: bolder;
 }
 
-/* Responsive */
-@media screen and (max-width: 991.98px) {
+.metode-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
+.kartu-metode {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.kartu-metode img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px black;
+}
+
+
+
+@media screen and (max-width: 768px){
     .wrapper {
         width: 90%;
     }
-
     .logo a {
         display: block;
         width: 100%;
         text-align: center;
     }
-
     nav .menu {
         width: 100%;
         margin: 0;
     }
-
     nav .menu ul {
         text-align: center;
         margin: auto;
         line-height: 60px;
     }
-
     nav .menu ul li {
         display: inline-block;
         float: none;
     }
-
     section {
-        display: flex;
+        display: block;
     }
-
     section img {
-        display: flex;
+        display: block;
         width: 100%;
         height: auto;
     }
-
     .kartu-partner {
         width: 50%;
     }
-
     .kartu-tutor {
         width: 50%;
     }
+}
+
+#home {
+    scroll-margin-top: 120px;
+}
+
+#online {
+    scroll-margin-top: 80px;
+}
+
+#offline {
+    scroll-margin-top: 80px;
+}
+
+#partners {
+    scroll-margin-top: 90px;
 }
